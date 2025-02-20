@@ -17,6 +17,8 @@ pipeline {
 
                 # TODO fill out the path to conda here
                 export PATH="$HOME/.pyenv/bin:$PATH"
+                echo $HOME
+                echo $PATH
                 eval "$(pyenv init --path)"
                 eval "$(pyenv virtualenv-init -)"
 
