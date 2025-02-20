@@ -16,9 +16,9 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
-                export PYENV_ROOT="/home/yhong3/.pyenv"
-                [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-                eval "$(/home/yhong3/.pyenv/pyenv init - zsh)"
+                export PATH="$HOME/.pyenv/bin:$PATH"
+                eval "$(pyenv init --path)"
+                eval "$(pyenv virtualenv-init -)"
 
                 pyenv activate lab6
 
