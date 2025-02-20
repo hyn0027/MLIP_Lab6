@@ -16,13 +16,9 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
-                export PATH="$HOME/.pyenv/bin:$PATH"
-                echo $HOME
-                echo $PATH
-                eval "$(pyenv init --path)"
-                eval "$(pyenv virtualenv-init -)"
-
-                pyenv activate lab6
+                python -m venv venv
+                source venv/bin/activate
+                pip install -r requirements.txt
 
                 # TODO Complete the command to run pytest
                 pytest
