@@ -18,7 +18,7 @@ pipeline {
                 # TODO fill out the path to conda here
                 export PYENV_ROOT="/home/yhong3/.pyenv"
                 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-                eval "$(pyenv init - zsh)"
+                eval "$(/home/yhong3/.pyenv/pyenv init - zsh)"
 
                 pyenv activate lab6
 
