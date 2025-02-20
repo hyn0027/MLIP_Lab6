@@ -16,9 +16,9 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
-                python3 -m venv venv
+                python3.12 -m venv venv
                 source venv/bin/activate
-                python3 -m pip install -r requirements.txt
+                pip install -r requirements.txt
 
                 # TODO Complete the command to run pytest
                 pytest
