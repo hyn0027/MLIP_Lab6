@@ -16,6 +16,10 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
+                export PYENV_ROOT="$HOME/.pyenv"
+                [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+                eval "$(pyenv init - zsh)"
+                
                 pyenv activate lab6
 
                 # TODO Complete the command to run pytest
